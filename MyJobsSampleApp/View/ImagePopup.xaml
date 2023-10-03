@@ -1,0 +1,11 @@
+﻿<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+               x:Class="MyJobsSampleApp.View.ImagePopup"
+               xmlns:viewmodel="clr-namespace:MyJobsSampleApp.ViewModel"
+               x:DataType="viewmodel:ImagePopupViewModel">
+    <VerticalStackLayout Spacing="5" Padding="10">
+        <Image Source="{Binding Photo}" HeightRequest="300" WidthRequest="300" VerticalOptions="StartAndExpand" />
+        <Button Text="Close" Clicked="Button_Clicked"/>
+    </VerticalStackLayout>
+</toolkit:Popup>

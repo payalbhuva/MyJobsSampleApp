@@ -1,0 +1,58 @@
+﻿<Properties StartupConfiguration="{B9C1F376-B1FE-4BCB-99BF-07E3630607E0}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/payal/Desktop/MyJobsSampleApp/MyJobsSampleApp/ViewModel/LoginViewModel.cs" relfile="MyJobsSampleApp/ViewModel/LoginViewModel.cs" line="33" column="1" />
+      <Breakpoint file="/Users/payal/Desktop/MyJobsSampleApp/MyJobsSampleApp/Data/DatabaseContext.cs" relfile="MyJobsSampleApp/Data/DatabaseContext.cs" line="26" column="1" />
+      <Breakpoint file="/Users/payal/Desktop/MyJobsSampleApp/MyJobsSampleApp/ViewModel/JobsPageViewModel.cs" relfile="MyJobsSampleApp/ViewModel/JobsPageViewModel.cs" line="140" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.EE6E82F5-B369-4DE8-AAE4-9D49DF14B57C" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyJobsSampleApp/ViewModel/JobsDetailViewModel.cs">
+    <Files>
+      <File FileName="MyJobsSampleApp/ViewModel/BaseViewModel.cs" Line="7" Column="15" />
+      <File FileName="MyJobsSampleApp/Data/DatabaseContext.cs" Line="69" Column="33" />
+      <File FileName="MyJobsSampleApp/Platforms/iOS/Program.cs" Line="1" Column="1" />
+      <File FileName="MyJobsSampleApp/Platforms/iOS/AppDelegate.cs" Line="8" Column="76" />
+      <File FileName="MyJobsSampleApp/Enum/JobStatus.cs" Line="7" Column="16" />
+      <File FileName="MyJobsSampleApp/View/Login.xaml" Line="18" Column="17" />
+      <File FileName="MyJobsSampleApp/View/JobsPage.xaml.cs" Line="13" Column="1" />
+      <File FileName="MyJobsSampleApp/View/Login.xaml.cs" Line="3" Column="31" />
+      <File FileName="MyJobsSampleApp/ViewModel/LoginViewModel.cs" Line="27" Column="22" />
+      <File FileName="MyJobsSampleApp/MauiProgram.cs" Line="32" Column="1" />
+      <File FileName="MyJobsSampleApp/AppShell.xaml.cs" Line="10" Column="58" />
+      <File FileName="MyJobsSampleApp/AppShell.xaml" Line="13" Column="1" />
+      <File FileName="MyJobsSampleApp/View/JobsDetail.xaml" Line="21" Column="1" />
+      <File FileName="MyJobsSampleApp/View/JobsPage.xaml" Line="52" Column="105" />
+      <File FileName="MyJobsSampleApp/ViewModel/JobsDetailViewModel.cs" Line="5" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MyJobsSampleApp" expanded="True">
+            <Node name="MyJobsSampleApp" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="net7.0-android" expanded="True">
+                  <Node name="FrameworkReferences" expanded="True" />
+                  <Node name="PackageDependencies" expanded="True" />
+                </Node>
+                <Node name="net7.0-ios" expanded="True">
+                  <Node name="PackageDependencies" expanded="True">
+                    <Node name="CommunityToolkit.Mvvm" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
+              <Node name="AppShell.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MyJobsSampleApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.EE6E82F5-B369-4DE8-AAE4-9D49DF14B57C" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

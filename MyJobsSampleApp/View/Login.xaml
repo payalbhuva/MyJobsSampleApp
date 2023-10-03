@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyJobsSampleApp.View.Login"
+             xmlns:viewmodel="clr-namespace:MyJobsSampleApp.ViewModel"
+             x:DataType="viewmodel:LoginViewModel">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Image
+                Source="workers.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HorizontalOptions="Center"
+                WidthRequest="500"
+                HeightRequest="250"/>
+            <Entry
+                Text="{Binding Username}"
+                Placeholder="Username"
+                Margin="20,0"/>
+            <Entry
+                Text="{Binding Password}"
+                Placeholder="Password"
+                Margin="20,0"/>
+            <Button
+                Text="Login"
+                Margin="20,0"
+                Command="{Binding ExecuteLoginCommand}"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+

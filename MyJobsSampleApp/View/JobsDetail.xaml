@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyJobsSampleApp.View.JobsDetail"
+             xmlns:viewmodels="clr-namespace:MyJobsSampleApp.ViewModel"
+             x:DataType="viewmodels:JobsDetailViewModel"
+             xmlns:model="clr-namespace:MyJobsSampleApp.Model"
+             Title="JobsDetail">
+    <ScrollView>
+        <VerticalStackLayout Margin="20">
+            <Label Text="Job Id " FontFamily="OpenSansSemibold"/>
+            <Label Text="{Binding SelectedJob.Id}" Margin="0,0,0,20"/>
+            <Label Text="Name " FontFamily="OpenSansSemibold"/>
+            <Label Text="{Binding SelectedJob.Name}" Margin="0,0,0,20"/>
+            <Label Text="Description " FontFamily="OpenSansSemibold"/>
+            <Label Text="{Binding SelectedJob.Description}" Margin="0,0,0,20"/>
+            <Label Text="Status " FontFamily="OpenSansSemibold"/>
+            <Label Text="{Binding SelectedJob.Status}" Margin="0,0,0,20"/>
+            <Label Text="Start Date " FontFamily="OpenSansSemibold"/>
+            <Label Text="{Binding SelectedJob.StartDate, StringFormat='{0:dd-MM-yyyy}'}" Margin="0,0,0,20"/>
+            <Label Text="Due Date " FontFamily="OpenSansSemibold"/>
+            <Label Text="{Binding SelectedJob.DueDate, StringFormat='{0:dd-MM-yyyy}'}" Margin="0,0,0,20"/>
+            <Label Text="Completion Date " FontFamily="OpenSansSemibold"/>
+            <Label Text="{Binding SelectedJob.CompletionDate, StringFormat='{0:dd-MM-yyyy}'}" Margin="0,0,0,20"/>
+            <HorizontalStackLayout IsVisible="{Binding IsEvidenceVisible}" Spacing="10" VerticalOptions="CenterAndExpand">
+                <Label Text="Photo Evidence " FontFamily="OpenSansSemibold"/>
+                <Button x:Name="uploadbutton" Text="Upload image" Command="{Binding UploadImageCommand}"
+                Margin="0,0,0,20" IsVisible="{Binding IsUploadVisible}" >
+                    <Button.ImageSource>
+                        <FontImageSource 
+                         FontFamily="FreeSolid"
+                         Glyph="{x:Static model:FreeSolidIcons.Paperclip}"
+                         Size="20" />
+                    </Button.ImageSource>
+                </Button>
+
+                <Button Text="Show image" Command="{Binding ShowImageCommand}"
+                Margin="0,0,0,20" IsVisible="False">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button"
+                                 Binding="{Binding Source={x:Reference uploadbutton},
+                                               Path=IsVisible}"
+                                 Value="False">
+                            <Setter Property="IsVisible"
+                                         Value="True" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                    <Button.ImageSource>
+                        <FontImageSource 
+                         FontFamily="FreeSolid"
+                         Glyph="{x:Static model:FreeSolidIcons.Image}"
+                         Size="20" />
+                    </Button.ImageSource>
+                </Button>
+            </HorizontalStackLayout>
+            <VerticalStackLayout IsVisible="{Binding ChangeJobStatusBtnVisible}">
+                <Button x:Name="startbutton" Text="Start Job" VerticalOptions="EndAndExpand"
+                Command="{Binding StartJobCommand}" IsVisible="{Binding StartJobVisible}"/>
+                <Button Text="Complete Job" VerticalOptions="EndAndExpand"
+                Command="{Binding CompletedJobCommand}" IsVisible="false">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button"
+                                 Binding="{Binding Source={x:Reference startbutton},
+                                               Path=IsVisible}"
+                                 Value="false">
+                            <Setter Property="IsVisible"
+                                         Value="true" />
+                        </DataTrigger>
+                    </Button.Triggers>
+                </Button>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
