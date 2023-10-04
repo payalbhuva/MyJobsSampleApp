@@ -1,4 +1,4 @@
 # MyJobsSampleApp
-This is a simple Jobs application in .net Maui. 
-**Username: Test
+This is a sample .net Maui application 
+**Username: Test |
 Password:12345**
